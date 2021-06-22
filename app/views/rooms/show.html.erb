@@ -1,0 +1,11 @@
+<h1> This is <%= @room.name%></h1>
+
+<h3>Here's a little bit about this room <%= @room.room_description %></h3>
+
+<p>There are <%= @room.windows %> in this room </p>
+
+<p>Here is the room color: <%= @room.hex %></p>
+
+<% if @room.user == current_user %>
+    <h4><%= link_to "Edit Room", edit_room_path(@room) %></h4>
+<% end %>

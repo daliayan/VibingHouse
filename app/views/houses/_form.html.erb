@@ -1,0 +1,24 @@
+<%= form_for(@house) do |f| %>
+
+     <div class="form-group">
+        <%= f.label "Name Your House:" %>
+        <%= f.text_field :name %>
+    </div><br>
+
+     <div class="form-group">
+        <%= f.label "Choose Your Color:" %>
+        <input type="color" name="hex" >
+    </div><br>
+
+     <div class="form-group">
+        <%= f.label "How much is your house worth?" %>
+        <%= f.number_field :price %>
+    </div><br>
+
+     <div class="form-group">
+        <%= f.label "How large is your house?" %>
+        <%= f.number_field :size %> sq. ft
+    </div><br>
+
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1> List of Rooms</h1>
+
+<% @rooms.each do |room| %>
+    <%= room.name %>
+    <%= room.room_description %>
+    <%= room.windows %>
+    <%= room.hex %>
+<% end %>
