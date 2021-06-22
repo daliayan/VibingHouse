@@ -1,0 +1,14 @@
+<h1 class="title" style="font-size:40px; color:#0E1E02">Sign Up Here</h1><br>
+
+<%= form_for(@user, url:'/signup') do |f| %>
+   <p style="font-size:12pt; color:#0E1E02;">
+    <%= f.label :username %>
+    <%= f.text_field :username %><br>
+    <br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
+    </p>
+    <br>
+
+    <%= f.submit " Sign Up "%>
+<% end %>

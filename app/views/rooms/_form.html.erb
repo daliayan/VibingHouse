@@ -1,0 +1,16 @@
+<%= form_for([@house, @room]) do |f| %>
+
+    <%= f.label "Name This Room" %>
+    <%= f.text_field :name %>
+
+    <%= f.label "Room Description" %>
+    <%= f.text_field :room_description %>
+
+    <%= f.label "Number of Windows in Room" %>
+    <%= f.number_field :windows %>
+
+    <%= f.label "Room Color" %>
+    <%= f.integer :hex %>
+
+    <%= f.submit %>
+<% end %>
