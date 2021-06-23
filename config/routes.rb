@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   resources :users do
-    resources :houses, only: [:new, :index, :create] #shallow: true routing to avoid deep nesting
+    resources :houses, shallow: true #only: [:new, :create, :index] #shallow: true routing to avoid deep nesting
   end
+  post '/users/:id/houses/new', to: 'houses#create'
 
   resources :rooms do
     resources :comments

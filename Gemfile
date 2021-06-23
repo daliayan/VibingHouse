@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # gem 'node', '~> 4.3'
-# gem 'yarn', '~> 0.1.1'
+
 
 gem 'omniauth'
 # gem 'omniauth-rails_csrf_protection'
