@@ -1,7 +1,7 @@
-<h1 class="title" style="font-size:40px; color:#0E1E02">Login in Here</h1><br>
+<h1 class="title" style="font-size:40px; color:#0E1E02">Login in Here</h1>
 
 <%= form_for :user do |f| %>
-    <p style="font-size:12pt; color:#0E1E02;">
+    <p style="font-size:14pt; color:#0E1E02;">
     <%= f.label :username %>
     <%= f.text_field :username %><br>
     <br>
@@ -9,5 +9,5 @@
     <%= f.password_field :password %><br>
     </p>
     <%= f.submit " Login " %>
-
 <% end %>
+<br>

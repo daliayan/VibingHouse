@@ -7,12 +7,13 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params[:username])
 
         if user && user.authenticate(params[:password])
-            session[:user_id] = user.id
-            @user = user 
+            create_session
             redirect_to user_path(user)
+            # binding.pry
         else
-            binding.pry
+            # binding.pry
             render :error
+            # binding.pry
         end
     end
 
