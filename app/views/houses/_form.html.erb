@@ -1,4 +1,4 @@
-<%= form_for @houses do |f| %>
+<%= form_for new_user_house_path do |f| %>
 
      <div class="form-group">
         <%= f.label "Name Your House:" %>
@@ -20,7 +20,8 @@
         <%= f.number_field :size %> sq. ft
     </div><br>
 
-    <input type="submit">
+    <%= f.submit "Submit" %>
+    <br>
     <br>
 
 <% end %>

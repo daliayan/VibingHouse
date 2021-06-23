@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 4) do
     t.integer "hex"
     t.float "price"
     t.integer "size"
+    t.integer "user_id"
   end
 
   create_table "rooms", force: :cascade do |t|

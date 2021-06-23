@@ -10,7 +10,7 @@ class HousesController < ApplicationController
     end
 
     def new
-        @house = House.new
+        @house = House.new(house_params)
     end
 
     def create
@@ -28,7 +28,7 @@ class HousesController < ApplicationController
     private
 
     def house_params
-        params.permit(:name, :hex, :size, :price)
+        params.permit(:user_id, :name, :hex, :size, :price)
     end
 
 end
