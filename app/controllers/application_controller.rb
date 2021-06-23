@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
       end 
     end
 
-    def create_session
-      session[:user_id] = @user.id
-    end
+    # def create_session
+    #   session[:user_id] = user.id
+    # end
 end
