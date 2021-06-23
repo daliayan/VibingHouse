@@ -9,12 +9,14 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
 
-  get '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
 
-  resources :users do
-    resources :houses, shallow: true #only: [:new, :create, :index] #shallow: true routing to avoid deep nesting
-  end
-  post '/users/:id/houses/new', to: 'houses#create'
+  # resources :users do
+  #   resources :houses, shallow: true #only: [:new, :create, :index] #shallow: true routing to avoid deep nesting
+  # end
+  # post '/users/:id/houses/new', to: 'houses#create'
+
+  resources :houses
 
   resources :rooms do
     resources :comments
