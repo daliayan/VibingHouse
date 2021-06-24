@@ -1,11 +1,10 @@
 class House < ApplicationRecord
-    before_commit :logged_in?
 
     belongs_to :user
     has_many :rooms
     has_many :comments
 
-    validates :hex, :price, :size, presence: true
+    validates :price, :hex, :size, presence: true
     validates :name, presence: true, uniqueness: true
     # valdiates :price, presence: true
 

@@ -2,7 +2,9 @@
 
 <% @houses.each do |house| %>
     <%= link_to house.name, house_path(house) %>
-    <% house.rooms.each do |room| %>
-        <% link_to room.name, room_path(room) %>
-        <% end %>
 <% end %>
+
+ 
+<%# house.rooms.each do |room| %>
+        <%# link_to room.name, room_path(room) %>
+        <%# end %>
