@@ -13,10 +13,12 @@ class HousesController < ApplicationController
         @house = House.new(house_params)
     end
 
+    # binding.pry
     def create
         @house = House.new(house_params)
         if @house.save
             redirect_to house_path(@house)
+            binding.pry
         else
             render :new
         end
@@ -28,7 +30,7 @@ class HousesController < ApplicationController
     private
 
     def house_params
-        params.permit(:user_id, :name, :hex, :size, :price)
+        params.require(:house).permit(:user_id, :name, :hex, :size, :price)
     end
 
 end
