@@ -21,8 +21,4 @@ class ApplicationController < ActionController::Base
         root_path
       end 
     end
-
-    # def create_session
-    #   session[:user_id] = user.id
-    # end
 end

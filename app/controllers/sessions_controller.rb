@@ -1,25 +1,22 @@
 class SessionsController < ApplicationController
 
     def new
+        # render :login
     end
 
     def create
         user = User.find_by(username: params[:user][:username])
-    # binding.pry
         if user && user.authenticate(params[:user][:password])
             session[:user_id] = user.id
             redirect_to user_path(user)
-            # binding.pry
         else
-            # binding.pry
             render :error
-            # binding.pry
         end
     end
 
     def destroy
         session.clear
-        redirect_to root_path, notice: 'Logged out!'  
+        redirect_to login_path 
     end
     
 end
