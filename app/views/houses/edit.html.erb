@@ -1,5 +1,6 @@
 <h1>Edit Your House</h1>
 
 <%# form_for @house, url: edit_house_path(@house) do |f| %>
-
-<%# <%= render partial: 'form'%> 
+<%= form_for @house do |f| %>
+    <%= render partial: 'form', locals: {f: f} %>
+<% end %>

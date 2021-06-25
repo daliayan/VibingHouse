@@ -2,4 +2,6 @@
 
 <h1 class="title" style="font-size:40px; color:#0E1E02">Create a new house</h1>
 
-<%= render partial: 'form'%>
+<%= form_for @house, url: user_houses_path(@house.user) do |f| %>
+    <%= render partial: 'form', locals: {f: f} %>
+<% end %>
