@@ -2,23 +2,23 @@
 
      <div class="form-group">
         <%= f.label "Name Your House:" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, required: true %>
     </div><br>
 
      <div class="form-group">
         <%= f.label "Choose Your Color:" %>
-        <%= f.color_field :hex %>
+        <%= f.color_field :hex, required: true %>
     </div>
     <br>
 
      <div class="form-group">
         <%= f.label "How much is your house worth?  $" %>
-        <%= f.number_field :price %> 
+        <%= f.number_field :price, required: true %> 
     </div><br>
 
      <div class="form-group">
         <%= f.label "How large is your house?" %>
-        <%= f.number_field :size %> sq. ft
+        <%= f.number_field :size, required: true %> sq. ft
     </div><br>
 
     <%= f.submit %>

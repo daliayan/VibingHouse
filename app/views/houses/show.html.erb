@@ -1,10 +1,16 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
 
-<h1 style="font-size:30px; color:#0E1E02"> This is <%= @house.name %> House </h1>
-<br>
-<%# <h3 style="font-size:20px; color:#0E1E02"> Is the house: <%= @house.hex.color_field %> </h3> 
-<br>
-<h3 style="font-size:20px; color:#0E1E02"> The house costs: <%= @house.price %> </h3>
-<br>
-<h3 style="font-size:20px; color:#0E1E02">The house size is <%= @house.size %> </h3>
-<br>
+<h1 style="font-size:30px; color:#0E1E02; text-align:center"> This is <%= @house.name %> </h1>
+<h3 style="font-size:20px; color:#0E1E02; text-align:center"> The house costs: <%= @house.price %> </h3>
+<h3 style="font-size:20px; color:#0E1E02; text-align:center">The house size is <%= @house.size %> </h3>
+<h4 style="color:#0E1E02; text-align:center"><%= link_to "Edit House", edit_house_path(@house) %></h4>
+
+
+
+<%# link_to "DELETE HOUSE", edit_house_path(@house), method: :delete %>
+
+<%# <%= link_to "Edit House", edit_house_path(@user) %>
+
+
+<%# <%= render partial: 'form', %>
+<%# <h3 style="font-size:20px; color:#0E1E02"> Is the house: <%= @house.hex.color_field %>
