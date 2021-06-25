@@ -25,12 +25,6 @@ class HousesController < ApplicationController
 
     def edit
         @house = House.find_by(params[:id])
-        # @house.update(house_params)
-        # if @house.valid?
-        #     redirect_to edit_house_path(@house)
-        # else
-        #     render :edit
-        # end
     end
 
     def update
