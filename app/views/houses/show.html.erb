@@ -1,8 +1,10 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
 
 <h1 style="font-size:30px; color:#0E1E02; text-align:center"> This is <%= @house.name %> </h1>
-<p style="font-size:25px; color:#0E1E02; text-align:center"> The house costs: <%= @house.price %> </p>
-<p style="font-size:25px; color:#0E1E02; text-align:center">The house size is <%= @house.size %> </p>
+<p style="font-size:25px; color:#0E1E02; text-align:center"> House color: <%= @house.hex %></p>
+<p style="font-size:20px; color:#0E1E02; text-align:center">Copy and Paste your color and <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">see it here:</a></p>
+<p style="font-size:25px; color:#0E1E02; text-align:center"> The house costs $<%= @house.price %> </p>
+<p style="font-size:25px; color:#0E1E02; text-align:center">The house size is <%= @house.size %> sq. ft. </p>
 <h4 style="color:#0E1E02; text-align:center"><%= link_to "Edit House", edit_house_path %></h4>
 
 
@@ -10,4 +12,3 @@
 <h4 style="text-align:center"><%= button_to "DELETE HOUSE", house_path(@house), method: :delete %></h4>
 <br>
 
-<%# <h3 style="font-size:20px; color:#0E1E02"> Is the house: <%= @house.hex %>
