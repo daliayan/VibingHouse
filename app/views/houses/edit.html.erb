@@ -1,2 +1,30 @@
 <h1>Edit Your House</h1>
-<%= render partial: 'form' %>
+
+<%= form_for @house, url: edit_house_path(@house) do |f| %>
+
+     <div class="form-group">
+        <%= f.label "Name Your House:" %>
+        <%= f.text_field :name, required: true %>
+    </div><br>
+
+     <div class="form-group">
+        <%= f.label "Choose Your Color:" %>
+        <%= f.color_field :hex, required: true %>
+    </div>
+    <br>
+
+     <div class="form-group">
+        <%= f.label "How much is your house worth?  $" %>
+        <%= f.number_field :price, required: true %> 
+    </div><br>
+
+     <div class="form-group">
+        <%= f.label "How large is your house?" %>
+        <%= f.number_field :size, required: true %> sq. ft
+    </div><br>
+
+    <%= f.submit %>
+    <br>
+    <br>
+
+<% end %>

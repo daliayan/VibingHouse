@@ -24,13 +24,13 @@ class HousesController < ApplicationController
     end
 
     def edit
-        # @house = House.find_by(id: params[:id])
-        # redirect_to house_path if !@house || @house.user != current_user
-        # if @house.update(house_params)
-        #     redirect_to house_path(@house)
-        # else
-        #     render :edit
-        # end
+        @house = House.find_by(params[:id])
+        # @house.update(house_params)
+        if @house.valid?
+            redirect_to edit_house_path(@house)
+        else
+            render :edit
+        end
     end
 
     def update
