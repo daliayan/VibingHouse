@@ -1,13 +1,13 @@
-<h1 class="title" style="font-size:40px; color:#0E1E02">Login in Here</h1>
+<h1 style="font-size:40px; color:#0E1E02; margin-left: 40px">Login in Here</h1>
 
 <%= form_for(:user) do |f| %>
-    <p style="font-size:14pt; color:#0E1E02;">
+    <p style="font-size:14pt; color:#0E1E02; margin-left: 40px">
     <%= f.label :username %>
     <%= f.text_field :username, required: true %><br>
     <br>
     <%= f.label :password %>
     <%= f.password_field :password, required: true  %><br>
     </p>
-    <%= f.submit " Login " %>
+    <p style="margin-left: 45px"><%= f.submit " Login " %></p>
 <% end %>
 <br>

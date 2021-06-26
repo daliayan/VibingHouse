@@ -1,9 +1,9 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
 
 
-<h1 style="text-align:center">★ <%= @user.username%>'s Houses ★</h1>
+<h1 style="margin-left: 35px">★ <%= @user.username%>'s Houses ★</h1>
 
 
-<h2 style="text-align:center"> <%= link_to "Create a House", new_user_house_url(@user) %> </h2>
-<h2 style="text-align:center"> <%= link_to "All Houses", user_houses_url(@user) %> </h2>
+<h2 style="margin-left: 35px"> <%= link_to "Create a House", new_user_house_url(@user) %> </h2>
+<h2 style="margin-left: 35px"> <%= link_to "All Houses", user_houses_url(@user) %> </h2>
 

@@ -1,12 +1,12 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
 
-<h1>Create a New House</h1>
-<%# link_to "Create a New House", user_houses_path(@user) %>
+<h1 style="margin-left: 40px">Create a New House</h1>
+<%# link_to "Create a New House", new_user_house_url(@house) %>
 
-<h1>All the Houses</h1>
+<h1 style="margin-left: 40px">All the Houses</h1>
 <ol>
     <% @houses.each do |house| %>
-        <li><%= link_to house.name, house_path(house) %></li>
+        <li style="font-size:18px; color:#0E1E02; margin-left: 40px"><%= link_to house.name, house_path(house) %></li><br>
     <% end %>
 </ol>
 
