@@ -7,6 +7,8 @@
 <p style="font-size:25px; color:#0E1E02; text-align:center"> The house costs $<%= @house.price %> </p>
 <p style="font-size:25px; color:#0E1E02; text-align:center">The house size is <%= @house.size %> sq. ft. </p>
 
+<h2 style="text-align:center"> <%= link_to "All Houses", user_houses_path(@house) %> </h2>
+
 <% if @user == current_user %>
     <h4 style="color:#0E1E02; text-align:center"><%= link_to "Edit House", edit_house_path(@house) %></h4>
     <h4 style="text-align:center"><%= button_to "DELETE HOUSE", house_path(@house), method: :delete %></h4>

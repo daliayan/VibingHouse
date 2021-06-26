@@ -1,5 +1,8 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
 
+<h1>Create a New House</h1>
+<%# link_to "Create a New House", user_houses_path(@user) %>
+
 <h1>All the Houses</h1>
 <ol>
     <% @houses.each do |house| %>
