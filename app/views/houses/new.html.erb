@@ -1,10 +1,10 @@
-<% if @user = current_user %>
+<%# if @user = current_user %>
         <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
         <h1 class="title" style="font-size:40px; color:#0E1E02">Create a new house</h1>
 
         <%= form_for @house, url: user_houses_path(@house.user) do |f| %>
             <%= render partial: 'form', locals: {f: f} %>
         <% end %>
-    <% else %>
+    <%# else %>
         <h1 style="text-align:center"><%= link_to "Sign Up Here", '/signup' %></h1>
-<% end %>
+<%# end %>

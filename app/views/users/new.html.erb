@@ -1,16 +1,15 @@
-<h1 class="title" style="font-size:40px; color:#0E1E02">Sign Up Here</h1>
+<h1 class="title" style="font-size:40px; color:#0E1E02; margin-left: 40px">Sign Up Here</h1>
 
 <%= form_for(@user, url:'/signup') do |f| %>
-   <p style="font-size:12pt; color:#0E1E02;">
+   <p style="font-size:14pt; color:#0E1E02; margin-left: 40px">
     <%= f.label :username %>
     <%= f.text_field :username, required: true %><br>
     <br>
     <%= f.label :password %>
     <%= f.password_field :password, required: true  %><br>
     </p>
-    <br>
 
-    <%= f.submit " Sign Up "%>
+    <p style="margin-left:45px"><%= f.submit " Sign Up "%></p>
     <br>
     <br>
 <% end %>
