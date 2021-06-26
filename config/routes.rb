@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :houses, shallow: true ##shallow: true routing to avoid deep nesting
   end
 
-  resources :rooms do
+  resources :houses do
     resources :comments
   end
   resources :comments
