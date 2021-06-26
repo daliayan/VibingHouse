@@ -11,11 +11,8 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   resources :users do
-    resources :houses, shallow: true #only: [:new, :create, :index] #shallow: true routing to avoid deep nesting
+    resources :houses, shallow: true ##shallow: true routing to avoid deep nesting
   end
-  # post '/users/:id/houses/new', to: 'houses#create'
-
-  # resources :houses
 
   resources :rooms do
     resources :comments

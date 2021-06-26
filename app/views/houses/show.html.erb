@@ -1,5 +1,5 @@
 <h3 style="text-align:center"> <%= button_to "Log Out", '/logout', method: :delete %>  </h3>
-
+<h2 style="font-size:22px; text-align:center"> <%= link_to "All Houses", user_houses_path(@house) %> </h2>
 
 <h1 style="font-size:30px; color:#0E1E02; margin-left: 40px">This is <%= @house.name %> </h1>
 <p style="font-size:25px; color:#0E1E02; margin-left: 40px"> House color: <%= @house.hex %></p>
@@ -7,11 +7,11 @@
 <p style="font-size:25px; color:#0E1E02; margin-left: 40px"> The house costs $<%= @house.price %> </p>
 <p style="font-size:25px; color:#0E1E02;margin-left: 40px">The house size is <%= @house.size %> sq. ft. </p>
 
-<h2 style="font-size:22px; margin-left: 40px"> <%= link_to "All Houses", user_houses_path(@house) %> </h2>
+
 
 <% if @house.user.id == current_user %>
-    <h4 style="color:#0E1E02; text-align:center"><%= link_to "Edit House", edit_house_path(@house) %></h4>
-    <h4 style="text-align:center"><%= button_to "DELETE HOUSE", house_path(@house), method: :delete %></h4>
+    <h4 style="color:#0E1E02; margin-left: 40px"><%= link_to "Edit House", edit_house_path(@house) %></h4>
+    <h4 style="margin-left: 40px"><%= button_to "DELETE HOUSE", house_path(@house), method: :delete %></h4>
 <% end %>
 <br>
 
