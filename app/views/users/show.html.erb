@@ -5,6 +5,8 @@
 
 <% if @user = current_user %>
     <h2 style="text-align:center"> <%= link_to "Create a House", new_user_house_url(@user) %> </h2>
+    <br>
+    <h2 style="text-align:center"> <%= link_to "All Houses", user_houses_url(@user) %> </h2>
 <% end %>
 <br>
 

@@ -1,10 +1,9 @@
 <h1>All the Houses</h1>
 
-<% @houses.each do |house| %>
-    <%= link_to house.name, house_path(house) %>
-<% end %>
-
- 
-<%# house.rooms.each do |room| %>
-        <%# link_to room.name, room_path(room) %>
-        <%# end %>
+<%# if @user = current_user %>
+<ol>
+    <% @houses.each do |house| %>
+        <li><%= link_to house.name, house_path(house) %></li>
+    <% end %>
+</ol>
+<%# end %>
