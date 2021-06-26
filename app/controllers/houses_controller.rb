@@ -1,19 +1,21 @@
 class HousesController < ApplicationController
-    before_action :not_logged_in
 
     def index 
         @houses = House.all
     end
 
     def show
+        require_login
         @house = House.find_by_id(params[:id])
     end
 
     def new
+        require_login
         @house = House.new(user_id: params[:user_id])
     end
 
     def create
+        require_login
         @house = House.new(house_params)
         @house.user_id = params[:user_id]
         if @house.save
@@ -25,10 +27,12 @@ class HousesController < ApplicationController
 
     def edit
         @house = House.find_by(params[:id])
+        require_login
     end
 
     def update
         @house = House.find(params[:id])
+        require_login
         @house.update(house_params)
         if @house.valid?
             redirect_to house_path(@house)
@@ -39,6 +43,7 @@ class HousesController < ApplicationController
     
     def destroy
         @house = House.find(params[:id])
+        require_login
         @house.destroy
         redirect_to root_path
     end

@@ -3,10 +3,8 @@
 
 <h1 style="text-align:center">★ <%= @user.username%>'s Houses ★</h1>
 
-<% if @user = current_user %>
+<% if @user == current_user %>
     <h2 style="text-align:center"> <%= link_to "Create a House", new_user_house_url(@user) %> </h2>
     <h2 style="text-align:center"> <%= link_to "All Houses", user_houses_url(@user) %> </h2>
 <% end %>
 <br>
-
-<%# <%= display_houses %>

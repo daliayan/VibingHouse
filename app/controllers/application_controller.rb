@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
 
-    helper_method :current_user, :logged_in?, :create_session
+    helper_method :current_user, :logged_in?
 
     private 
 
@@ -14,11 +14,5 @@ class ApplicationController < ActionController::Base
 
     def logged_in?
         !!current_user
-    end
-  
-    def not_logged_in
-      if !logged_in?         
-        root_path
-      end 
     end
 end
