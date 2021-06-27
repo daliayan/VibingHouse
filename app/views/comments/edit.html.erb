@@ -1,10 +1,7 @@
 <h1>Edit Your Comment</h1>
 
-
 <%= form_for(@comment) do |f|%>
-
-  <%= f.label :content %>
-  <%= f.text_field :content %>
-
-  <%= f.submit %>
+    <p style="font-size:18px; color:#0E1E02; margin-left: 20px"><%= f.label :content %></p>
+    <p style="font-size:18px; color:#0E1E02; margin-left: 20px"><%= f.text_area :content, size: "30x4", required: true %></p>
+    <p style="margin-left: 30px"><%= f.submit %></p>
 <% end %>
