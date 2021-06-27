@@ -31,11 +31,11 @@ class HousesController < ApplicationController
     end
 
     def update
-        @house = House.find(params[:id])
         require_login
+        @house = House.find(params[:id])
         @house.update(house_params)
         if @house.valid?
-            redirect_to house_path(@house)
+            redirect_to houses_path
         else
             render :edit
         end

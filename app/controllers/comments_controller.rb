@@ -9,12 +9,12 @@ class CommentsController < ApplicationController
 
     def new
         require_login
-        @comment = Comment.new(house_id: params[:house_id])
-        # if params[:house_id] && @house = House.find_by_id(params[:house_id])
-        #     @comment = @house.comments.build
-        # else
-        #     @comment = Comment.new
-        # end
+        # @comment = Comment.new(house_id: params[:house_id])
+        if @house = House.find_by_id(params[:house_id])
+            @comment = @house.comments.build
+        else
+            @comment = Comment.new
+        end
     end
 
     def create
@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
         @comment.house_id = params[:house_id]
         #current_user.comments.build(comment_params)
         if @comment.save
-            redirect_to comment_path(@comment)
+            redirect_to house_path(@house)
         else
             render :new
         end
