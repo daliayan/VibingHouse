@@ -3,5 +3,5 @@ class Comment < ApplicationRecord
     belongs_to :house
 
     validates :content, presence: true
-    validates :house, uniqueness: {scope: :user_id, message: "Only one comment per user allowed. Thank you."}
+    validates :house, uniqueness: {scope: :user_id, message: "Only one comment per user."}
 end

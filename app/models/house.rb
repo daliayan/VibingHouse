@@ -1,15 +1,13 @@
 class House < ApplicationRecord
 
     belongs_to :user
-    has_many :rooms
+    # has_many :rooms
     has_many :comments
+    has_many :users, through: :comments
 
     validates :price, :hex, :size, presence: true
     validates :name, presence: true, uniqueness: true
-    # valdiates :price, presence: true
 
     #numericality: {greater_than: 0, less_than: 999,999,999}
-
-    
 
 end
