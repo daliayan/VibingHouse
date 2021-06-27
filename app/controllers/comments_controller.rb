@@ -26,7 +26,9 @@ class CommentsController < ApplicationController
         @comment = Comment.new(comment_params)
         @comment.house_id = params[:house_id]
         #current_user.comments.build(comment_params)
+        binding.pry
         if @comment.save
+            # binding.pry
             redirect_to house_path(@house)
         else
             render :new
