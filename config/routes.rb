@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
+  get "/auth/:provider/callback" => 'sessions#omniauth'
+
   resources :users do
     resources :houses, shallow: true ##shallow: true routing to avoid deep nesting
   end
