@@ -5,4 +5,4 @@ pid = `sudo lsof -iTCP -sTCP:LISTEN -n -P | grep #{port} | awk '{ print $2 }' | 
 puts "PID: #{pid}"
 `kill -9 #{pid}` unless pid.empty?
 
-###RUN ruby rails_server_killer.rb OR kill pid
+###RUN ruby rails_server_killer.rb OR kill -9 pid

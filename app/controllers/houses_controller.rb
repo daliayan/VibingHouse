@@ -1,21 +1,19 @@
 class HousesController < ApplicationController
+    before_action :require_login
 
     def index 
         @houses = House.all
     end
 
     def show
-        require_login
         @house = House.find_by_id(params[:id])
     end
 
     def new
-        require_login
         @house = House.new(user_id: params[:user_id])
     end
 
     def create
-        require_login
         @house = House.new(house_params)
         @house.user_id = params[:user_id]
         if @house.save
@@ -31,7 +29,6 @@ class HousesController < ApplicationController
     end
 
     def update
-        require_login
         @house = House.find(params[:id])
         @house.update(house_params)
         if @house.valid?
@@ -43,7 +40,6 @@ class HousesController < ApplicationController
     
     def destroy
         @house = House.find(params[:id])
-        require_login
         @house.destroy
         redirect_to root_path
     end
