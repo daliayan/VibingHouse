@@ -1,19 +1,19 @@
 class RoomsController < ApplicationController
+    before_action :require_login
 
     def index
         @rooms = Room.all
     end
 
-    def show
-        @room = Room.find(params[:id])
-    end
+    # def show
+    #     @room = Room.find(params[:id])
+    # end
 
     def new
-        if params[:user_id] && @user = User.find_by_id(params[:user_id])
-            @room = @user.rooms.build
+        if params[:house_id] && @house = House.find_by_id(params[:user_id])
+            @room = @house.rooms.build
         else
             @room = Room.new
-            @room.build_house
         end
     end
 
@@ -26,9 +26,9 @@ class RoomsController < ApplicationController
         end
     end
 
-    def edit
-        @room = Room.find(params[:id])
-    end
+    # def edit
+    #     @room = Room.find(params[:id])
+    # end
 
     def update
         @room = Room.find(params[:id])
@@ -49,7 +49,7 @@ class RoomsController < ApplicationController
     private
     
     def room_params
-        params.require(:room).permit(:name, :room_description, :windows, :hex, :user_id, :house_id)
+        params.require(:room).permit(:name, :description, :windows, :hex, :user_id, :house_id)
     end
 
 

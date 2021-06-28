@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
+  create_table "house_rooms", force: :cascade do |t|
+    t.integer "windows"
+    t.integer "hex"
+    t.integer "room_id"
+    t.integer "house_id"
+    t.index ["house_id"], name: "index_house_rooms_on_house_id"
+    t.index ["room_id"], name: "index_house_rooms_on_room_id"
+  end
+
   create_table "houses", force: :cascade do |t|
     t.string "name"
     t.string "hex"
@@ -30,12 +39,7 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
-    t.text "room_description"
-    t.integer "windows"
-    t.integer "house_id"
-    t.integer "hex"
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_rooms_on_user_id"
+    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,5 +51,6 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
 
   add_foreign_key "comments", "houses"
   add_foreign_key "comments", "users"
-  add_foreign_key "rooms", "users"
+  add_foreign_key "house_rooms", "houses"
+  add_foreign_key "house_rooms", "rooms"
 end

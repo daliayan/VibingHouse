@@ -1,16 +1,18 @@
-<%= form_for([@house, @room]) do |f| %>
+<div class="form-group">
+    <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+        <%= label_tag "Name This Room" %>
+        <%= collection_select :room, :name, Room.all, :id, :name, prompt: true %>
+    </p>
+</div>
 
-    <%= f.label "Name This Room" %>
-    <%= f.text_field :name %>
+<div class="form-group">
+    <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+        <%= label_tag "Room Description" %>
+        <%= text_field_tag :description %>
+    </p>
+</div>
 
-    <%= f.label "Room Description" %>
-    <%= f.text_field :room_description %>
+<p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+    <%= submit_tag %>
+</p>
 
-    <%= f.label "Number of Windows in Room" %>
-    <%= f.number_field :windows %>
-
-    <%= f.label "Room Color" %>
-    <%= f.integer :hex %>
-
-    <%= f.submit %>
-<% end %>

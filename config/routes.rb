@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   end
   resources :comments
 
+  resources :houses do
+    resources :rooms
+  end
 end

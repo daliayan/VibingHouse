@@ -4,7 +4,7 @@
 <p style="font-size:25px; color:#0E1E02; margin-left: 40px"> The house costs $<%= @house.price %> </p>
 <p style="font-size:25px; color:#0E1E02;margin-left: 40px">The house size is <%= @house.size %> sq. ft. </p>
 
-<h4 style="font-size:18px; color:#0E1E02;margin-left: 40px"><%= link_to "Add a new comment", new_house_comment_path(@house) %></h4>
+<%# <h4 style="font-size:18px; color:#0E1E02;margin-left: 40px"><%= link_to "Add a new comment", new_house_comment_path(@house) %>
 
 <% if @house.user.id == current_user.id %>
     <h4 style="font-size:18px; color:#0E1E02; margin-left: 40px"><%= link_to "Edit House", edit_house_path(@house) %></h4>

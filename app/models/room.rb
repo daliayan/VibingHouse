@@ -1,16 +1,17 @@
 class Room < ApplicationRecord
-    belongs_to :house
-    belongs_to :user, through: :houses  
+    has_many :house_rooms
+    has_many :houses, through: :house_rooms
+    has_many :user, through: :houses  
 
-    validates :name, :room_description, :windows, :hex, presence: true
-    validate :too_many_rooms
+    validates :name, :description, presence: true
+    # validate :too_many_rooms
 
 
-    def too_many_rooms
-        my_house = self.user.rooms
-        if my_house.size > 10
-            errors.add(:room_id, "There are too many rooms.")
-        end
-    end
+    # def too_many_rooms
+    #     my_house = self.user.rooms
+    #     if my_house.size > 10
+    #         errors.add(:room_id, "There are too many rooms.")
+    #     end
+    # end
 
 end

@@ -17,7 +17,7 @@ class HousesController < ApplicationController
         @house = House.new(house_params)
         @house.user_id = params[:user_id]
         if @house.save
-            redirect_to house_path(@house)
+            redirect_to new_house_room_path(@house)
         else
             render :new
         end
