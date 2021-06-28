@@ -4,8 +4,9 @@
     <p style="margin-left: 30px"><%= f.submit %></p>
 <% end %>
 <br>
-<%= @comment.id %><br>
+<%= @comment.user_id %><br>
 <%= @comment.house.id %>
+<%= @comment.house_id %>
 
 <%# #t, url: house_comments_url(@comment.house_id) %>
 <%# form_for([@comment.house_id, @comment]), url: house_comments_url(@comment.house_id) do |f|%>
