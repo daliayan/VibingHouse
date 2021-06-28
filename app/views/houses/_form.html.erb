@@ -1,24 +1,32 @@
-    <div class="form-group">
-        <%= f.label "Name Your House:" %>
-        <%= f.text_field :name, required: true %>
-    </div><br>
-
-     <div class="form-group">
-        <%= f.label "Choose Your Color:" %>
-        <%= f.color_field :hex, required: true %>
+   <div class="form-group">
+       <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+            <%= f.label "Name Your House:" %>
+            <%= f.text_field :name, required: true %>
+        </p>
     </div>
-    <br>
 
      <div class="form-group">
-        <%= f.label "How much is your house worth?  $" %>
-        <%= f.number_field :price, required: true %> 
-    </div><br>
+        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+            <%= f.label "Choose Your Color:" %>
+            <%= f.color_field :hex, required: true %>
+        </p>
+    </div>
 
      <div class="form-group">
-        <%= f.label "How large is your house?" %>
-        <%= f.number_field :size, required: true %> sq. ft
-    </div><br>
+        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+            <%= f.label "How much is your house worth?  $" %>
+            <%= f.number_field :price, required: true %>
+        </p>
+    </div>
 
-    <%= f.submit %>
-    <br>
-    <br>
+     <div class="form-group">
+        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+            <%= f.label "How large is your house?" %>
+            <%= f.number_field :size, required: true %> sq. ft
+        </p>
+    </div>
+   
+
+    <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+        <%= f.submit %>
+    </p>
