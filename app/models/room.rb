@@ -3,7 +3,8 @@ class Room < ApplicationRecord
     has_many :houses, through: :house_rooms
     has_many :user, through: :houses  
 
-    validates :name, :description, presence: true
+    validates :name, presence: true
+    validates :description, presence: true
     # validate :too_many_rooms
 
 

@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   end
 
   resources :houses do
-    resources :comments
-  end
-  resources :comments
-
-  resources :houses do
     resources :rooms
   end
+
+  # resources :houses do
+  #   resources :comments
+  # end
+  # resources :comments
+
 end
