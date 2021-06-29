@@ -10,15 +10,18 @@ class RoomsController < ApplicationController
     # end
 
     def new
-        if params[:house_id] && @house = House.find_by_id(params[:user_id])
-            @room = @house.rooms.build
-        else
-            @room = Room.new
-        end
+        # if params[:house_id] && @house = House.find_by_id(params[:house_id])
+        #     @room = @house.rooms.build
+        # else
+        #     @room = Room.new
+        # end
+
+        @room = Room.new(house_id: params[:house_id])
     end
 
     def create
         @room = Room.new(room_params)
+        @room.house_id = params[:house_id]
         if @room.save
             redirect_to rooms_path
         else
