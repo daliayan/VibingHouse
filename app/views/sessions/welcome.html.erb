@@ -2,4 +2,4 @@
 <h3 style="text-align:center"> <%= link_to "Sign Up Here", signup_path %> ★ <%= link_to "Log In Here", login_path %> ★ </h3>
 <h3 style="text-align:center"><%= button_to "Sign in or Signup with google", '/auth/google_oauth2',  method: :post %></h3>
 
-<p><%= ENV['GOOGLE_CLIENT_ID'] %>HII</p>
+<%= ENV['GOOGLE_CLIENT_ID'] %>
