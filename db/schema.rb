@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
 
   create_table "house_rooms", force: :cascade do |t|
     t.integer "windows"
-    t.integer "hex"
+    t.string "hex"
     t.integer "room_id"
     t.integer "house_id"
     t.index ["house_id"], name: "index_house_rooms_on_house_id"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"
-    t.text "description"
   end
 
   create_table "users", force: :cascade do |t|

@@ -4,7 +4,7 @@ class Room < ApplicationRecord
     has_many :users, through: :houses  
 
     validates :name, presence: true
-    validates :description, presence: true
+    
     # validate :too_many_rooms
 
 
