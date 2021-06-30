@@ -15,14 +15,14 @@
      <div class="form-group">
         <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
             <%= f.label "How much is your house worth?  $" %>
-            <%= f.number_field :price, required: true %>
+            <%= f.number_field :price, required: true, min: 1, max: 1000000000 %>
         </p>
     </div>
 
      <div class="form-group">
         <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
             <%= f.label "How large is your house?" %>
-            <%= f.number_field :size, required: true %> sq. ft
+            <%= f.number_field :size, required: true, min: 1, max: 90000 %> sq. ft
         </p>
     </div>
    

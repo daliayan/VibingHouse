@@ -14,7 +14,7 @@
 <div class="form-group">
         <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
             <%= f.label "How many windows in room : " %>
-            <%= f.number_field :windows, required: true %>
+            <%= f.number_field :windows, required: true, min: 1, max: 15 %>
         </p>
     </div>
 
