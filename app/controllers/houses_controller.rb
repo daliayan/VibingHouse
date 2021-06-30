@@ -10,7 +10,7 @@ class HousesController < ApplicationController
     end
 
     def new
-        @house = House.new(user_id: session[:user_id])
+       @house = House.new(user_id: session[:user_id])
     end
 
     def create
