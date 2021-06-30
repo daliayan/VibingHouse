@@ -10,7 +10,7 @@ class HousesController < ApplicationController
     end
 
     def new
-        @house = House.new(user_id: params[:user_id])
+        @house = House.new(user_id: session[:user_id])
     end
 
     def create
@@ -25,7 +25,6 @@ class HousesController < ApplicationController
 
     def edit
         @house = House.find_by(params[:id])
-        require_login
     end
 
     def update
