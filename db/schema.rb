@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2021_06_27_173540) do
 
-  create_table "comments", force: :cascade do |t|
-    t.string "content"
-    t.integer "user_id"
-    t.integer "house_id"
-    t.index ["house_id"], name: "index_comments_on_house_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
   create_table "house_rooms", force: :cascade do |t|
     t.integer "windows"
     t.string "hex"
@@ -48,8 +40,6 @@ ActiveRecord::Schema.define(version: 2021_06_27_173540) do
     t.string "provider"
   end
 
-  add_foreign_key "comments", "houses"
-  add_foreign_key "comments", "users"
   add_foreign_key "house_rooms", "houses"
   add_foreign_key "house_rooms", "rooms"
 end
