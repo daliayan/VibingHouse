@@ -27,7 +27,6 @@ class HouseRoomsController < ApplicationController
             redirect_to root_path
         end
         
-        # @house_rooms = HouseRoom.all
     end
 
     private

@@ -1,13 +1,25 @@
 <h1 style="margin-left: 35px">All Your Rooms</h1>
 
-<%= @house_room %>
+<p style="font-size:16px; color:#0E1E02; margin-left: 40px">
+    ‼Copy and Paste‼ your color and 
+    <a href="https://www.w3schools.com/colors/colors_picker.asp" style="text-decoration: none; font-size:20px;" target="_blank">⋆⋆see it here⋆⋆</a>
+</p>
 
 <ol>
     <% @house_rooms.each do |house_room| %>
         <li style="font-size:18px; color:#0E1E02; margin-left: 40px">
-            <%= house_room.room.name %>
-            <%= house_room.windows %>
-            <%= house_room.hex %>
+            <h3 p style="font-size:22px; color:#0E1E02; margin-left: 40px">
+                <%= house_room.room.name %>
+            </h3>
+
+            <p style="font-size:18px; color:#0E1E02; margin-left: 40px">
+                This room has <%= house_room.windows %> windows
+            </p>
+
+            <p style="font-size:18px; color:#0E1E02; margin-left: 40px">
+               House color: <%= house_room.hex %>
+            </p>
+
         </li>
         <br>
     <% end %>
