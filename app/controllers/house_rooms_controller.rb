@@ -1,10 +1,6 @@
 class HouseRoomsController < ApplicationController
     before_action :require_login
 
-    def index
-        @house_rooms = HouseRoom.all
-    end
-
     def new
         @house_room = HouseRoom.new(house_id: params[:house_id])
     end
@@ -21,6 +17,14 @@ class HouseRoomsController < ApplicationController
 
     def show
         @house_room = HouseRoom.find_by_id(params[:id])
+    end
+
+    def index
+        # @house_room = HouseRoom.find_by_id(params[:house_id])
+        # if @house_rooms = params[:house_id]
+        #     @house_room.room
+        # end
+        @house_rooms = HouseRoom.all
     end
 
     private

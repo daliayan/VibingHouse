@@ -15,15 +15,13 @@
         <a href="https://www.w3schools.com/colors/colors_picker.asp" style="text-decoration: none; font-size:20px;" target="_blank">⋆⋆see it here⋆⋆</a>
 </p>
 
-<%# if @house_room.house.user_id == current_user.id %>
+<% if @house_room.house.user_id == current_user.id %>
+    <p>----------------------------------------------------------------------</p>
     <p style="font-size:16px; color:#0E1E02; margin-left: 40px">
         <%= link_to "Add Another Room to Your House", new_house_house_room_path(@house_room) %>
     </p>
-<%# end %>
-
-
-
-<br>
+    <p>----------------------------------------------------------------------</p>
+<% end %>
 
 
 
