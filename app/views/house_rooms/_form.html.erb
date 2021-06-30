@@ -1,0 +1,24 @@
+<div class="form-group">
+    <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+        <%= f.label "Which room this is : " %>
+        <%= f.collection_select :room_id, Room.all, :id, :name, prompt: true %>
+    </p>
+</div>
+<div class="form-group">
+    <p style="font-size:22px; color:#0E1E02;margin-left: 40px ">
+        <%= f.label "Choose a room color : " %>
+        <%= f.color_field :hex %>
+    </p>
+</div>
+
+<div class="form-group">
+        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+            <%= f.label "How many windows in room : " %>
+            <%= f.number_field :windows, required: true %>
+        </p>
+    </div>
+
+<p style="font-size:22px; color:#0E1E02;margin-left: 40px">
+    <%= f.submit %>
+</p>
+
