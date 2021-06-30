@@ -10,10 +10,14 @@ class HouseRoomsController < ApplicationController
         @house_room = HouseRoom.new(house_room_params)
         @house_room.house_id = params[:house_id]
         if @house_room.save
-            redirect_to house_house_room_path(@house_room)
+            redirect_to house_house_room_path(@house_room,:house_room_id)
         else
             render :new
         end
+    end
+
+    def show
+        @house_room = HouseRoom.find_by_id(params[:id])
     end
 
     private
