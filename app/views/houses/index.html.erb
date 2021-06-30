@@ -1,7 +1,10 @@
 <h1 style="margin-left: 35px">All the Houses</h1>
 <ol>
     <% @houses.each do |house| %>
-        <li style="font-size:18px; color:#0E1E02; margin-left: 40px"><%= link_to house.name, house_path(house) %></li><br>
+        <li style="font-size:18px; color:#0E1E02; margin-left: 40px">
+            <%= link_to house.name, house_path(house) %>
+            </li>
+            <br>
     <% end %>
 </ol>
 

@@ -15,13 +15,19 @@
     The house size is <%= @house.size %> sq. ft. 
 </p>
 
+<h2 style="margin-left: 35px">
+    <%= link_to "Customized Rooms", house_house_room_url(@house) %>
+</h2>
+
 <%# <h4 style="font-size:18px; color:#0E1E02;margin-left: 40px">
     <%= link_to "Add a new comment", new_house_comment_path(@house) %>
 
 
 <% if @house.user.id == current_user.id %>
+    <p>----------------------------------------------------------------------</p>
     <h4 style="font-size:18px; color:#0E1E02; margin-left: 40px"><%= link_to "Edit House", edit_house_path(@house) %></h4>
     <h4 style="margin-left: 40px"><%= button_to "DELETE HOUSE", house_path(@house), method: :delete %></h4>
+    <p>----------------------------------------------------------------------</p>
 <% end %>
 <br>
 

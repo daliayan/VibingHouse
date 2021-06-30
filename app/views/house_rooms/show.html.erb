@@ -1,17 +1,13 @@
 <h1 style="font-size:30px; color:#0E1E02; margin-left: 40px">
-    This is <%= @house_room %> #BLANK BLANK
+    <%= @house_room.room.name %> 
 </h1>
 
 <p style="font-size:25px; color:#0E1E02; margin-left: 40px">
-    Here's a little bit about this room <%= @house_room %> #BLANK BLANK#
+    There are <%= @house_room.windows %> windows in this room.
 </p>
 
 <p style="font-size:25px; color:#0E1E02; margin-left: 40px">
-    There are #BLANK  BLANK#<%= @house_room %> windows in this room.
-</p>
-
-<p style="font-size:25px; color:#0E1E02; margin-left: 40px">
-    Here is the room color: <%= @house_room %> #BLANK BLANK#
+    Here is the room color: <%= @house_room.hex %> 
 </p>
 
 <p style="font-size:16px; color:#0E1E02; margin-left: 40px">
@@ -19,8 +15,16 @@
         <a href="https://www.w3schools.com/colors/colors_picker.asp" style="text-decoration: none; font-size:20px;" target="_blank">⋆⋆see it here⋆⋆</a>
 </p>
 
+<p style="font-size:16px; color:#0E1E02; margin-left: 40px">
+    <%= %>
+</p>
 
-<%= @house_room %>
+<%= @house_room.house_id %> 6
+<%= @house_room.id %> 8
+<%= current_user.id %> !
+<%# @current_user %>
+<%= @house_room.room.id %> &&
+<%= @house_room.room.id %> ((()))
 
 <%# if @house_room.user == current_user %>
   <%#  <h4><%# link_to "Edit Room", edit_room_path(@room)</h4> %>
