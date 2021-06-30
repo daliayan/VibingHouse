@@ -1,36 +1,5 @@
 <h1 class="title" style="font-size:40px; color:#0E1E02; margin-left: 40px">Edit Your House</h1>
 
 <%= form_for(@house) do |f| %>
-    <div class="form-group">
-       <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
-            <%= f.label "Name Your House:" %>
-            <%= f.text_field :name, required: true %>
-        </p>
-    </div>
-
-     <div class="form-group">
-        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
-            <%= f.label "Choose Your Color:" %>
-            <%= f.color_field :hex, required: true %>
-        </p>
-    </div>
-
-     <div class="form-group">
-        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
-            <%= f.label "How much is your house worth?  $" %>
-            <%= f.number_field :price, required: true, min: 1, max: 1000000000 %>
-        </p>
-    </div>
-
-     <div class="form-group">
-        <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
-            <%= f.label "How large is your house?" %>
-            <%= f.number_field :size, required: true, min: 1, max: 90000 %> sq. ft
-        </p>
-    </div>
-   
-
-    <p style="font-size:22px; color:#0E1E02;margin-left: 40px">
-        <%= f.submit %>
-    </p>
+    <%= render partial: 'form', locals: {f: f} %>
 <% end %>
