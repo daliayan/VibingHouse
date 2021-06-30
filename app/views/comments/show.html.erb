@@ -1,5 +1,0 @@
-<h2><%= @comment.content%> by: <%= @comment.user.username%></h2>
-
-<% if @comment.user == current_user %>
-  <%= link_to "Edit Comment", edit_comment_path(@comment)%>
-<% end %>

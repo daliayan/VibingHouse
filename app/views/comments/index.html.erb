@@ -1,8 +1,0 @@
-<h1 style="margin-left: 40px">All the Comments</h1>
-<ol>
-    <% @comments.each do |comment| %>
-        <li style="font-size:18px; color:#0E1E02; margin-left: 40px">
-        <%= comment.user.username%> said: "<%= comment.content %>" about: <%= link_to comment.house.title, comment_path(comment.house_id)%>
-        </li><br>
-    <% end %>
-</ol>

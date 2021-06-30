@@ -20,9 +20,4 @@ Rails.application.routes.draw do
     resources :house_rooms
   end
 
-  # resources :houses do
-  #   resources :comments
-  # end
-  # resources :comments
-
 end
