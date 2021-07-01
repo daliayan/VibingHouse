@@ -15,7 +15,7 @@ class HousesController < ApplicationController
 
     def create
         @house = House.new(house_params)
-        @house.user_id = params[:user_id]
+        @house.user_id = session[:user_id]
         if @house.save
             redirect_to new_house_house_room_path(@house)
         else

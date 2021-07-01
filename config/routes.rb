@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :houses do
-    resources :house_rooms
+    resources :house_rooms, only: [:new, :create, :index, :show]
   end
 
 end
