@@ -8,7 +8,7 @@ class House < ApplicationRecord
     validates :price, :hex, :size, presence: true
     validates :name, presence: true, uniqueness: true
 
-    validate :most_expensive_house
+    scope :most_expensive_house, -> {where("price >= 999999999")}
 
 
     def self.most_expensive_house
