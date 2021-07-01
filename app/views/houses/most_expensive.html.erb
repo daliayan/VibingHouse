@@ -1,0 +1,9 @@
+<h1 style="margin-left: 35px">Most Expensive Houses</h1>
+<ol>
+    <% @house.each do |house| %>
+        <li style="font-size:18px; color:#0E1E02; margin-left: 40px">
+            <%= link_to house.name, house_path(house) %>
+            </li>
+            <br>
+    <% end %>
+</ol>

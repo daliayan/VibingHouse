@@ -9,11 +9,6 @@ class HousesController < ApplicationController
         @house = House.find_by_id(params[:id])
     end
 
-    def most_expensive
-        @houses = House.most_expensive_house.order_by_price
-        render :index
-    end
-
     def new
        @house = House.new(user_id: session[:user_id])
     end
@@ -40,6 +35,10 @@ class HousesController < ApplicationController
         else
             render :edit
         end
+    end
+
+    def most_expensive
+        @houses = House.most_expensive_house
     end
     
     def destroy

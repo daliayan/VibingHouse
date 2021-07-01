@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
 
   get '/houses/most_expensive' => 'houses#most_expensive'
+  
   resources :users do
     resources :houses, shallow: true ##shallow: true routing to avoid deep nesting
   end
