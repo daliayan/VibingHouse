@@ -11,11 +11,8 @@ class SessionsController < ApplicationController
     end
 
     def omniauth
-        user = User.find_or_create_by(uid: auth["iud"]) do |u|
-            u.username = auth["info"]["username"]
-            u.password = SecureRandom.hex(15)
-        end
-
+        user = User.from_omniauth(auth)
+        
         if user.valid?
             session[:user_id] = user.id
             redirect_to user_path(user)
