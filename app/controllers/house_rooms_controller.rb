@@ -20,13 +20,12 @@ class HouseRoomsController < ApplicationController
     end
 
     def index
-        house = House.find_by(params[:house_id])
+        house = House.find_by(id: params[:house_id])
         if house
             @house_rooms = house.house_rooms
         else
             redirect_to root_path
-        end
-        
+        end 
     end
 
     private
