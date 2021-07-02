@@ -23,6 +23,6 @@ Lastly you can run the Puma command to start up the server:
 puma
 ```
 
-## Where to Find My Blog About This Experience
+## Read & Watch more about my experience making this application
 - [My Blog](https://daliayan.medium.com/off-the-ruby-on-rails-163361d8c13c)
 - [User Application Walk-Through](https://www.youtube.com/watch?v=4JJWFRgcqzo)
