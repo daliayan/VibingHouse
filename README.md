@@ -26,3 +26,4 @@ puma
 ## Read & Watch More About My Experience Making This Application
 - [My Blog](https://daliayan.medium.com/off-the-ruby-on-rails-163361d8c13c)
 - [User Application Walk-Through](https://www.youtube.com/watch?v=4JJWFRgcqzo)
+- [Coding My Application Walk-Through](https://www.youtube.com/watch?v=KANsxu8SDus)
