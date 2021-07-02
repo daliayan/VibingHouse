@@ -1,6 +1,6 @@
 class House < ApplicationRecord
     belongs_to :user
-    has_many :house_rooms
+    has_many :house_rooms, dependent: :destroy
     has_many :rooms, through: :house_rooms
 
     validates :price, :hex, :size, presence: true
