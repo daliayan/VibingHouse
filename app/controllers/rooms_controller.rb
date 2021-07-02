@@ -12,8 +12,6 @@ class RoomsController < ApplicationController
         else
             @room = Room.new
         end
-
-        # @room = Room.new(house_id: params[:house_id])
     end
 
     def create
