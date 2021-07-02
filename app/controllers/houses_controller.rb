@@ -25,6 +25,7 @@ class HousesController < ApplicationController
 
     def edit
         @house = House.find(params[:id])
+        not_ur_house
     end
 
     def update
@@ -49,8 +50,14 @@ class HousesController < ApplicationController
 
     private
 
+    def not_ur_house
+        if @house.user_id != session[:user_id]
+            redirect_to houses_path
+        end
+    end
+
+
     def house_params
         params.require(:house).permit(:name, :hex, :size, :price)
     end
-
 end
