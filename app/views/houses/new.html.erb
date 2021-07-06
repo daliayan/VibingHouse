@@ -2,11 +2,10 @@
 
 <% @house.errors.full_messages.each do |msg|%>
     <ol>
-    <p style="color:red; font-size:25px; margin-left: 40px">
-       <li>
-        <%= msg %>
+        <li style="color:red; font-size:25px; margin-left: 40px">
+            <%= msg %>
         </li>
-    </p>
+    
     <ol>
 <% end %>
 
