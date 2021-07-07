@@ -25,7 +25,7 @@ puma
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/daliayan/VibingHouse. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct].
+Bug reports and pull requests are welcome on GitHub at https://github.com/daliayan/VibingHouse. This project is intended to be a safe, welcoming space for collaboration, and contributors.
 
 ## License
 
