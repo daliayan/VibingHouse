@@ -23,6 +23,14 @@ Lastly you can run the Puma command to start up the server:
 puma
 ```
 
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/daliayan/VibingHouse. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct].
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
 ## Read & Watch More About My Experience Making This Application
 - [My Blog](https://daliayan.medium.com/off-the-ruby-on-rails-163361d8c13c)
 - [User Application Walk-Through](https://www.youtube.com/watch?v=4JJWFRgcqzo)
