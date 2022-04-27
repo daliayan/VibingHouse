@@ -1,3 +1,5 @@
+1. Created using Ruby on Rails
+
 # Vibing House || Ruby on Rails 
 
 This Ruby on Rails project was a huge undertaking but it was worth the knowledge I learned during this phase. VibingHouse is an application where Users can create their own customized houses and houserooms.
